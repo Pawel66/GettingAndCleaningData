@@ -44,4 +44,4 @@ names(data_set) <- c("activity", "subject", as.character(features[grep("mean|std
 ######################################################################################
 tidy_data <- aggregate(data_set[3:81], by = list(activity = data_set$activity, subject = data_set$subject), mean)
 
-write.table(tidy_data, "./data.txt", row.names = TRUE, sep = "\t")
+write.table(tidy_data, "./data.txt", row.names = FALSE, sep = "\t")
